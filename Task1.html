@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"> </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const obj={
+            name:"Я бачу,вас цікавить пітьма",
+            FIO:"Ілларіон Павлюк",
+            pages:800,
+            photo1:"/1.jpg",
+            recz:"Книги про зниклих людей ось уже багато років мають величезну популярність серед читачів. Вони приваблюють нас не лишень бурхливим і вигадливим сюжетом, що тримає в постійній напрузі, але й атмосферою химерної таємниці й загадки. Усе це змушує відчувати, як мурашки бігають шкірою, а тому хочеться читати ще й ще.",
+            recz2:' «Я бачу, вас цікавить пітьма» українського автора Ілларіона Павлюка розповідає історію про Київського кримінального психолога, що вирушає в далеке, закинуте селище Буськів Сад. Одного разу там стається щось неймовірно жахливе: прямо посеред ночі зникає маленька беззахисна дівчинка. Однак згодом головний герой дізнається, що це далеко не перший моторошний випадок у селі. Річ у тому, що місцевістю блукає Звір – безпощадний серійний убивця. '
+        }
+
+        const divstyle={
+            backgroundColor:"white",
+            border:'2px solid black',
+            borderRadius:'20px',
+            width:'500px',
+            fontFamily:'Verdana',
+            marginLeft:'10px',
+            padding:'10px',
+            
+        }
+        const styleImg={
+            width:'200px',
+            padding:'10px',
+            
+        }
+        
+        const div = document.getElementById("app");
+
+        const Root = ReactDOM.createRoot(div);
+        Root.render(
+            <div style={divstyle}>
+                <img src={obj.photo1} style={styleImg} />
+                <p>{obj.name}</p>
+                <p>Автор:{obj.FIO}</p>
+                <p>Сторінок: {obj.pages}</p>
+                <p>{obj.recz}</p>
+                <p>{obj.recz2}</p>
+            </div>
+        )
+
+</script>
+</body>
+</html>

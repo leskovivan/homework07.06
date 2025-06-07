@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"> </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const obj={
+            name:"Паста карбонара",
+            ingridients:"100 г панчетты (или бекона),50 г сыра пекорино (pecorino),50 г сыра пармезан (parmesan),3 крупных яйца,350 г спагетти,2 зубчика чеснока, несильно раздавленных,50 г несолёного масла,Морская соль и свежемолотый чёрный перец по вкусу",
+             howToCook: `1. Доведите воду до кипения и сварите спагетти al dente.2. Мелко порубите панчетту.3. Взбейте яйца с тёртым сыром и перцем.4. Обжарьте панчетту с чесноком до хруста, уберите чеснок.5. Смешайте спагетти с панчеттой прямо в сковороде.6. Снимите сковороды с огня и добавьте яичную смесь, быстро перемешивая.7. Подавайте сразу, посыпав дополнительным сыром.`,
+            photo:"/3.jpg"
+        }
+
+        const divstyle={
+            backgroundColor:"white",
+            border:'2px solid black',
+            borderRadius:'20px',
+            width:'500px',
+            fontFamily:'Verdana',
+            marginLeft:'10px',
+            padding:'10px',
+            
+        }
+        const styleImg={
+            width:'200px',
+            padding:'10px',
+            
+        }
+        const pStyle={
+            backgroundColor:'white'
+        }
+        const div = document.getElementById("app");
+
+        const Root = ReactDOM.createRoot(div);
+        Root.render(
+            <div style={divstyle}>
+                <p>Название рецепта:{obj.name}</p>
+                <p>Составляющие рецепта (ингредиенты и их количество):{obj.ingridients}</p>
+                <p>Последовательность приготовления: {obj.howToCook}</p>
+                <img src={obj.photo} style={styleImg} />
+
+            </div>
+        )
+
+</script>
+</body>
+</html>

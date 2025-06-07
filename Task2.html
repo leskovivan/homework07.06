@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"> </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const obj={
+            name:"Arctic Monkeys",
+            FIO:"— Алекс Тернер (Alex Turner) — вокал и гитара— Мэтт Хелдерс (Matt Helders) — ударные и бэк-вокал— Джейми Кук (Jamie Cook) — гитара— Ник О’Мэлли (Nick O’Malley) — бас-гитараРанее в составе был Энди Николсон (Andy Nicholson), ушедший в 2006 году.",
+            albums:"Whatever People Say I Am, That’s What I’m Not (2006)Favourite Worst Nightmare (2007)Humbug (2009)Suck It and See (2011)AM (2013)Tranquility Base Hotel & Casino (2018)The Car (2022) ",
+            photo:"/2.jpg"
+        }
+
+        const divstyle={
+            backgroundColor:"white",
+            border:'2px solid black',
+            borderRadius:'20px',
+            width:'500px',
+            fontFamily:'Verdana',
+            marginLeft:'10px',
+            padding:'10px',
+            
+        }
+        const styleImg={
+            width:'200px',
+            padding:'10px',
+            
+        }
+        const div = document.getElementById("app");
+
+        const Root = ReactDOM.createRoot(div);
+        Root.render(
+            <div style={divstyle}>
+                <p>Название группы:{obj.name}</p>
+                <p>Информация об участниках группы:{obj.FIO}</p>
+                <p>Названия альбомов: {obj.albums}</p>
+                <img src={obj.photo} style={styleImg} />
+
+            </div>
+        )
+
+</script>
+</body>
+</html>
